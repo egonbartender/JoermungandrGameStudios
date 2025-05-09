@@ -1,0 +1,148 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0\c84706;\cssrgb\c0\c0\c93333;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24\fsmilli12320 \cf2 \expnd0\expndtw0\kerning0
+<!DOCTYPE html>\
+<html lang="en">\
+<head>\
+<meta charset="UTF-8" />\
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>\
+<title>J\'f6rmungandr Game Studios</title>\
+<link href="{\field{\*\fldinst{HYPERLINK "https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"}}{\fldrslt \cf3 \ul \ulc3 https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap}}" rel="stylesheet">\
+<style>\
+body \{\
+margin: 0;\
+font-family: 'Orbitron', sans-serif;\
+background-color: #0b0f1a;\
+color: #e0e0e0;\
+\}\
+\
+header \{\
+background: #1c2233;\
+padding: 20px;\
+display: flex;\
+align-items: center;\
+justify-content: space-between;\
+\}\
+\
+#logo \{\
+height: 60px;\
+\}\
+\
+.container \{\
+padding: 40px;\
+max-width: 1000px;\
+margin: auto;\
+\}\
+\
+h1, h2 \{\
+color: #00bcd4;\
+\}\
+\
+.editable \{\
+border: 1px dashed #00bcd4;\
+padding: 10px;\
+margin-bottom: 20px;\
+background: #1a1f2a;\
+\}\
+\
+.login-panel \{\
+position: fixed;\
+top: 10px;\
+right: 10px;\
+background: #1c2233;\
+padding: 10px;\
+border: 1px solid #00bcd4;\
+display: none;\
+\}\
+\
+#editBtn, #saveBtn \{\
+margin: 10px 0;\
+\}\
+\
+.login-input \{\
+background: #0b0f1a;\
+color: #e0e0e0;\
+border: 1px solid #00bcd4;\
+padding: 5px;\
+\}\
+\
+.login-btn \{\
+background: #00bcd4;\
+color: #000;\
+border: none;\
+padding: 5px 10px;\
+cursor: pointer;\
+\}\
+</style>\
+</head>\
+<body>\
+<header>\
+<img id="logo" src="logo.png" alt="J\'f6rmungandr Game Studios Logo">\
+<button onclick="toggleLogin()" class="login-btn">Login</button>\
+</header>\
+\
+<div class="login-panel" id="loginPanel">\
+<input type="password" id="password" class="login-input" placeholder="Enter password" />\
+<button onclick="login()" class="login-btn">Enter</button>\
+</div>\
+\
+<div class="container">\
+<h1 contenteditable="false" class="editable" id="title">J\'f6rmungandr Game Studios</h1>\
+<div class="editable" contenteditable="false" id="mission">\
+<h2>Our Mission</h2>\
+<p>To create immersive, AI-driven games that evolve with every playthrough and bring joy, challenge, and impact to the gaming world.</p>\
+</div>\
+\
+<div class="editable" contenteditable="false" id="vision">\
+<h2>Our Vision</h2>\
+<p>Replayable narratives, smart design, and next-gen VR integration \'96 all powered by a bold, independent studio.</p>\
+</div>\
+\
+<div class="editable" contenteditable="false" id="contact">\
+<h2>Contact</h2>\
+<p>Email: {\field{\*\fldinst{HYPERLINK "mailto:your@email.com"}}{\fldrslt \cf3 \ul \ulc3 your@email.com}}<br>Location: Switzerland</p>\
+</div>\
+\
+<button id="editBtn" onclick="enableEdit()" style="display:none;" class="login-btn">Edit</button>\
+<button id="saveBtn" onclick="disableEdit()" style="display:none;" class="login-btn">Save</button>\
+</div>\
+\
+<script>\
+function toggleLogin() \{\
+document.getElementById('loginPanel').style.display = 'block';\
+\}\
+\
+function login() \{\
+const pwd = document.getElementById('password').value;\
+if (pwd === \'82Joermunmat1\'92) \{\
+enableEdit();\
+document.getElementById('editBtn').style.display = 'inline-block';\
+document.getElementById('saveBtn').style.display = 'inline-block';\
+document.getElementById('loginPanel').style.display = 'none';\
+\} else \{\
+alert("Wrong password");\
+\}\
+\}\
+\
+function enableEdit() \{\
+document.querySelectorAll('.editable').forEach(e => \{\
+e.contentEditable = "true";\
+e.style.border = "2px solid #00ff90";\
+\});\
+\}\
+\
+function disableEdit() \{\
+document.querySelectorAll('.editable').forEach(e => \{\
+e.contentEditable = "false";\
+e.style.border = "1px dashed #00bcd4";\
+\});\
+\}\
+</script>\
+</body>\
+</html>}
